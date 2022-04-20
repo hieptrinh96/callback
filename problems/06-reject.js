@@ -10,6 +10,25 @@ problem.
 
 Examples:
 
+
+*******************************************************************************/
+
+let reject = function(array, cb) {
+    let arr = [];
+
+    for (let i = 0; i < array.length; i++) {
+        let el = array[i]
+        if (!cb(el)) {
+            arr.push(el);
+        }
+    }
+    return arr;
+};
+
+
+
+
+
 let isEven = function(n) {
     return n % 2 === 0;
 };
@@ -19,16 +38,5 @@ let hasA = function(s) {
     return s.toLowerCase().includes('a');
 };
 console.log(reject(['breadth', 'GRAPH', 'depth', 'height'], hasA)); // [ 'depth', 'height' ]
-*******************************************************************************/
-
-let reject = function() {
-
-};
-
-
-
-
-
-
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 module.exports = reject;

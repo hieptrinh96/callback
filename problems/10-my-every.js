@@ -7,6 +7,24 @@ Do not use the built in Array#every.
 
 Examples:
 
+
+*******************************************************************************/
+
+let myEvery = function(array, cb) {
+    let count = 0;
+
+    for (let i = 0; i < array.length; i++) {
+        if (cb(array[i])) {
+            count++;
+        }
+    }
+    return count === array.length;
+};
+
+
+
+
+
 let isEven = function (num) {
     return num % 2 === 0;
 };
@@ -19,16 +37,5 @@ console.log(myEvery([4, 8, 6, 10], isEven));            // true
 console.log(myEvery([4, 7, 6, 10], isEven));            // false
 console.log(myEvery(['book', 'door'], hasO));           // true
 console.log(myEvery(['book', 'door', 'pen'], hasO));    // false
-*******************************************************************************/
-
-let myEvery = function() {
-
-};
-
-
-
-
-
-
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 module.exports = myEvery;
