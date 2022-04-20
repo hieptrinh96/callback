@@ -5,6 +5,16 @@ exactly `number` elements of the array that return true when passed into the cal
 
 Examples:
 
+
+*******************************************************************************/
+
+let exactly = function(arr, num, cb) {
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (cb(arr[i])) count++;
+    }
+    return count === num
+};
 let result1 = exactly([18, 5, 32, 7, 100], 3, function (n) {
     return n % 2 === 0;
 });
@@ -24,12 +34,6 @@ let result4 = exactly(['follow', 'the', 'yellow', 'brick', 'road'], 0, function 
     return str.includes('x');
 });
 console.log(result4); // true
-
-*******************************************************************************/
-
-let exactly = function() {
-
-};
 
 
 
