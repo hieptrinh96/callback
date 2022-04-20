@@ -5,6 +5,22 @@ to overwrite elements of the original array, mutating the array.
 
 Examples:
 
+
+*******************************************************************************/
+
+let mapMutator = function(array, cb) {
+    for (let i = 0; i < array.length; i++) {
+        let el = array[i];
+        array[i] = cb(el, i);
+
+    }
+    return array;
+};
+
+
+
+
+
 let arr1 = [4, 2, 6, 5];
 mapMutator(arr1, function (el) {
     return el * 2;
@@ -16,16 +32,5 @@ mapMutator(arr2, function (el, i) {
     return el * i;
 });
 console.log(arr2); // [ 0, 9, 20 ]
-*******************************************************************************/
-
-let mapMutator = function() {
-
-};
-
-
-
-
-
-
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 module.exports = mapMutator;
