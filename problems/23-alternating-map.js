@@ -12,8 +12,21 @@ In other words,
 
 Examples:
 
+
+*******************************************************************************/
+
+
+let alternatingMap = function(arr, cb1, cb2) {
+    let newArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        let el = arr[i];
+        if (i % 2 === 0) newArr.push(cb1(el));
+        else newArr.push(cb2(el));
+    }
+    return newArr;
+};
 let triple = function (n) {
-    return 3 * n;
+return 3 * n;
 };
 
 let half = function (n) {
@@ -32,13 +45,6 @@ let whisper = function (s) {
 };
 console.log(alternatingMap(['hEy', 'EVERYone', 'whats', 'uP??'], yell, whisper));
 // [ 'HEY!', '..everyone..', 'WHATS!', '..up??..' ]
-
-*******************************************************************************/
-
-
-let alternatingMap = function() {
-
-};
 
 
 
