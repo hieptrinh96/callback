@@ -16,6 +16,8 @@ let sentenceMapper = function(str, cb) {
     }
     return newStr.join(' ')
 };
+
+
 let result1 = sentenceMapper("what is the answer?", function(word) {
     return word.toUpperCase() + "!";
 });
